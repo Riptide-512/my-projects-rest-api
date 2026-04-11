@@ -43,9 +43,9 @@ const projectPatchSchema = z
 
 const taskCreateSchema = z.strictObject({
   title: z
-    .string({ error: 'Task title is required.' })
+    .string({ error: 'Task name is required.' })
     .trim()
-    .min(1, { error: 'Task title is required.' }),
+    .min(1, { error: 'Task name is required.' }),
   description: z.string({ error: 'Description must be a string.' }).optional(),
   status: z
     .string({ error: statusMessage })
